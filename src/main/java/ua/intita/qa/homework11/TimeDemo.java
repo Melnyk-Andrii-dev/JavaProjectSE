@@ -1,6 +1,5 @@
 package ua.intita.qa.homework11;
 
-import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
