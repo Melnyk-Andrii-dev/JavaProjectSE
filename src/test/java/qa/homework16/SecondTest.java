@@ -19,20 +19,20 @@ public class SecondTest {
     @Before
     public void setEventDao(){
         event1.setTitle("Black Friday");
-        event1.setDate(new GregorianCalendar(2021, Calendar.NOVEMBER, 27));
+//        event1.setDate(new GregorianCalendar(2021, Calendar.NOVEMBER, 27));
         event1.setPlace("Megamoll");
 
         event2.setTitle("New Year");
-        event2.setDate(new GregorianCalendar(2022, Calendar.JANUARY, 1));
+//        event2.setDate(new GregorianCalendar(2022, Calendar.JANUARY, 1));
         event2.setPlace("Home");
 
         event3.setTitle("Teambuilding");
-        event3.setDate(new GregorianCalendar(2022, Calendar.MARCH, 14));
+//        event3.setDate(new GregorianCalendar(2022, Calendar.MARCH, 14));
         event3.setPlace("Unknown");
 
         event1edited.setId(event1.getId());
         event1edited.setTitle("Black Friday");
-        event1edited.setDate(new GregorianCalendar(2021, Calendar.NOVEMBER, 27));
+//        event1edited.setDate(new GregorianCalendar(2021, Calendar.NOVEMBER, 27));
         event1edited.setPlace("SkyPark");
 
         collection = new HashMap<>();

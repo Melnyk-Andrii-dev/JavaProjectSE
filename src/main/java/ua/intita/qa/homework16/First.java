@@ -5,7 +5,7 @@ import java.util.*;
 public class First {
     public static void main(String[] args) {
         First first = new First();
-        List<String> list = first.stringToList("Lorem ipsum dolor sit amet");
+        List<String> list = first.stringToList("Lorem ipsum dolor sit amet/n");
         System.out.println(list);
         System.out.println();
         Set<Map.Entry<String, Integer>> set = first.countDuplicates(new ArrayList<String>(Arrays.asList("one", "two", "one", "three", "two", "one"))).entrySet();

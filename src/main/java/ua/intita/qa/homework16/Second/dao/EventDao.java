@@ -12,7 +12,7 @@ public class EventDao implements CommonDao<Event> {
     @Override
     public Event save(Event event) {
         Event existed = events.get(event.getId());
-        if(existed != null){
+        if (existed != null) {
             existed.setTitle(event.getTitle());
             existed.setDate(event.getDate());
             existed.setPlace(event.getPlace());
