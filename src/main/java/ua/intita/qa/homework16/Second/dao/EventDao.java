@@ -22,6 +22,11 @@ public class EventDao implements CommonDao<Event> {
         return event;
     }
 
+    public Map<String, Event> saveMap(Map<String, Event> map) {
+        events.putAll(map);
+        return map;
+    }
+
     @Override
     public Event findById(String id) {
         return events.get(id);

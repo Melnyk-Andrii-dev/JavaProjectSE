@@ -1,10 +1,11 @@
 package ua.intita.qa.app.dao;
 
+import java.util.Collection;
 import java.util.List;
 
 public interface CommonDao <T>{
     T save(T entity);
     T findById(String id);
-    List<T> findAll();
+    Collection<T> findAll();
     void delete(String id);
 }
