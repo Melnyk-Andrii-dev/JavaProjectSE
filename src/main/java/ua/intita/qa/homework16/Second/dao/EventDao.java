@@ -1,5 +1,6 @@
 package ua.intita.qa.homework16.Second.dao;
 
+import ua.intita.qa.app.util.EventUtils;
 import ua.intita.qa.homework16.Second.entity.Event;
 
 import java.util.Collection;
@@ -7,7 +8,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class EventDao implements CommonDao<Event> {
-    Map<String, Event> events = new HashMap<>();
+    static Map<String, Event> events = new HashMap<>();
+    static{
+        events.putAll(EventUtils.readDataFromFile("data/order.csv"));
+    }
 
     @Override
     public Event save(Event event) {
@@ -21,6 +25,12 @@ public class EventDao implements CommonDao<Event> {
         events.put(event.getId(), event);
         return event;
     }
+
+    public Map<String, Event> saveMap(Map<String, Event> map) {
+        events.putAll(map);
+        return map;
+    }
+
 
     @Override
     public Event findById(String id) {
