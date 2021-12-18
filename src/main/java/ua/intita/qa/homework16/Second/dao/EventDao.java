@@ -1,21 +1,21 @@
 package ua.intita.qa.homework16.Second.dao;
 
 import ua.intita.qa.app.util.EventUtils;
-import ua.intita.qa.homework16.Second.entity.Event;
+import ua.intita.qa.homework16.Second.entity.EventOld;
 
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
-public class EventDao implements CommonDao<Event> {
-    static Map<String, Event> events = new HashMap<>();
+public class EventDao implements CommonDao<EventOld> {
+    static Map<String, EventOld> events = new HashMap<>();
     static{
         events.putAll(EventUtils.readDataFromFile("data/order.csv"));
     }
 
     @Override
-    public Event save(Event event) {
-        Event existed = events.get(event.getId());
+    public EventOld save(EventOld event) {
+        EventOld existed = events.get(event.getId());
         if (existed != null) {
             existed.setTitle(event.getTitle());
             existed.setDate(event.getDate());
@@ -26,19 +26,19 @@ public class EventDao implements CommonDao<Event> {
         return event;
     }
 
-    public Map<String, Event> saveMap(Map<String, Event> map) {
+    public Map<String, EventOld> saveMap(Map<String, EventOld> map) {
         events.putAll(map);
         return map;
     }
 
 
     @Override
-    public Event findById(String id) {
+    public EventOld findById(String id) {
         return events.get(id);
     }
 
     @Override
-    public Collection<Event> findAll() {
+    public Collection<EventOld> findAll() {
         return events.values();
     }
 
